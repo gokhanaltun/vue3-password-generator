@@ -55,9 +55,8 @@ const generateButtonClick = (e) => {
   allSelectedValues = shuffleString(allSelectedValues)
 
   let out = ""
-  let length = allSelectedValues.length >= 16 ? 16 : allSelectedValues.length
-  for (let i = 0; i < length; i++) {
-    out += allSelectedValues[Math.floor(Math.random() * length)]
+  for (let i = 0; i < 16; i++) {
+    out += allSelectedValues[Math.floor(Math.random() * allSelectedValues.length)]
   }
 
   state.output = out
